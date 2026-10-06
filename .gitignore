@@ -1,0 +1,93 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Test and coverage output
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Packaging artifacts
+build/
+dist/
+*.egg-info/
+*.egg
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Generated analysis outputs
+outputs/
+results/
+analysis_output/
+
+# Large microscopy images (controlled sample data may be force-added later)
+*.tif
+*.tiff
+*.ome.tif
+*.ome.tiff
+
+
+# Keep documentation and planning files local (requested)
+*.md
+*.MD
+*.markdown
+*.MARKDOWN
+plans/
+plan/
+*.plan
+*plan*.txt
+
+# Local review artifacts, test workspaces, and microscopy data
+/desktop-review/
+/sample_data/
+/.test*/
+/.pytest*/
+/.commit-check/
+*.csv
+*.xlsx
+*.npz
+*.npy
+*.png
+*.jpg
+*.jpeg
+*.bmp
+
+# Credentials, private keys, and machine-local agent configuration
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.pfx
+*.p12
+*.keystore
+credentials*
+secrets*
+*secret*.json
+*credentials*.json
+/.aws/
+/.ssh/
+/.codex/
+/.agents/
+
+# Public user guides are included; internal Markdown remains local
+!/README.md
+!/fiji-plugin/README.md

@@ -1,0 +1,7 @@
+cff-version: 1.2.0
+message: "If you use NerveNuc in your research, please cite the software."
+type: software
+title: NerveNuc
+version: 0.1.0
+authors:
+  - name: "NerveNuc contributors"

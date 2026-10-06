@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nervenuc"
+version = "0.1.0"
+description = "DAPI-anchored nuclear marker classification for peripheral nerve microscopy"
+readme = { text = "NerveNuc provides microscopy object detection, raw marker measurements, optional positivity classification, and standalone desktop workflows for 2D images and Z-stacks.", content-type = "text/plain" }
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+dependencies = [
+    "numpy",
+    "pandas",
+    "scipy",
+    "scikit-image",
+    "tifffile",
+    "matplotlib",
+    "openpyxl",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+gui = ["PySide6>=6.5.0"]
+gui-dev = ["pytest-qt"]
+fiji = ["roifile>=2024.5.24", "pyimagej>=1.5.0"]
+
+
+[project.scripts]
+nervenuc-gui = "nervenuc.gui.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+markers = [
+    "fiji: marks tests that require live local Fiji/PyImageJ runtime",
+    "validation_data: marks tests that require external live validation dataset",
+]
